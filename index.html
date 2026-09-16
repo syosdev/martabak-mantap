@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Martabak Mantap - Semua Outlet</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #1a1a2e;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 1.5rem;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 0.25rem;
+    }
+    .tagline { color: #aaa; margin-bottom: 2.5rem; }
+    .outlet-list {
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+    a.outlet {
+      display: block;
+      background: #16213e;
+      border: 1px solid #2a3a6a;
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      text-decoration: none;
+      color: #fff;
+      transition: transform 0.15s, border-color 0.15s;
+    }
+    a.outlet:hover {
+      transform: translateY(-2px);
+      border-color: #ff6b6b;
+    }
+    .outlet-city { font-size: 1.1rem; font-weight: 700; }
+    .outlet-label {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.2rem;
+      font-size: 0.85rem;
+      color: #4ade80;
+    }
+    .wa-text { color: #bbb; font-size: 0.8rem; margin-top: 0.15rem; }
+    .footer { margin-top: 2.5rem; font-size: 0.8rem; color: #666; }
+    .footer a { color: #888; }
+  </style>
+</head>
+<body>
+  <div class="logo">MARTABAK MANTAP</div>
+  <div class="tagline">5 Outlet di Balikpapan & Sekitarnya</div>
+
+  <div class="outlet-list">
+    <a class="outlet" href="https://wa.me/6285126310612" target="_blank">
+      <div class="outlet-city">Balikpapan Baru</div>
+      <div class="outlet-label">WhatsApp</div>
+      <div class="wa-text">0812-5131-0612</div>
+    </a>
+    <a class="outlet" href="https://wa.me/6285245961289" target="_blank">
+      <div class="outlet-city">Batakan</div>
+      <div class="outlet-label">WhatsApp</div>
+      <div class="wa-text">0852-4596-1289</div>
+    </a>
+    <a class="outlet" href="https://wa.me/6287874687679" target="_blank">
+      <div class="outlet-city">Kilo 2</div>
+      <div class="outlet-label">WhatsApp</div>
+      <div class="wa-text">0878-7468-7679</div>
+    </a>
+    <a class="outlet" href="https://wa.me/6281217719226" target="_blank">
+      <div class="outlet-city">Grogot</div>
+      <div class="outlet-label">WhatsApp</div>
+      <div class="wa-text">0812-1771-9226</div>
+    </a>
+    <a class="outlet" href="https://wa.me/6281217719227" target="_blank">
+      <div class="outlet-city">Petung</div>
+      <div class="outlet-label">WhatsApp</div>
+      <div class="wa-text">0812-1771-9227</div>
+    </a>
+  </div>
+
+  <div class="footer"><a href="https://wa.me/6285126310612">Kontak & Pemesanan</a></div>
+</body>
+</html>
