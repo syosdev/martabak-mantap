@@ -28,7 +28,13 @@
       margin-bottom: 0.15rem;
       color: #ec8803;
     }
-    .tagline { color: #7a4a1a; margin-bottom: 1.75rem; }
+    .logo-img {
+      display: block;
+      width: 100%;
+      max-width: 240px;
+      margin: 0 auto;
+    }
+    .tagline { font-family: 'Baloo 2', system-ui, sans-serif; font-weight: 600; color: #7a4a1a; margin-bottom: 1.75rem; }
     .outlet-list {
       width: 100%;
       max-width: 400px;
@@ -56,8 +62,10 @@
     }
     .outlet-header {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
+      gap: 0.3rem 0.1rem;
       padding-bottom: 0.7rem;
       margin-bottom: 0.75rem;
       border-bottom: 1px solid #f0d6b0;
@@ -112,7 +120,7 @@
   </style>
 </head>
 <body>
-  <div class="logo">MARTABAK MANTAP</div>
+  <div class="logo"><img class="logo-img" src="logo-mm.png" alt="Martabak Mantap"></div>
   <div class="tagline">5 Outlet di Balikpapan & Sekitarnya</div>
 
   <div class="outlet-list">
