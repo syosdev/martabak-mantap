@@ -4,12 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Martabak Mantap - Semua Outlet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: system-ui, -apple-system, sans-serif;
-      background: #1a1a2e;
-      color: #fff;
+      background: #fbeed9;
+      color: #4a2c0a;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -17,45 +20,95 @@
       padding: 3rem 1.5rem;
     }
     .logo {
-      font-size: 2rem;
+      font-family: 'Baloo 2', system-ui, sans-serif;
+      font-size: 2.1rem;
       font-weight: 800;
-      letter-spacing: 1px;
-      margin-bottom: 0.25rem;
+      line-height: 1.1;
+      letter-spacing: 0;
+      margin-bottom: 0.15rem;
+      color: #ec8803;
     }
-    .tagline { color: #aaa; margin-bottom: 2.5rem; }
+    .tagline { color: #7a4a1a; margin-bottom: 1.75rem; }
     .outlet-list {
       width: 100%;
       max-width: 400px;
       display: flex;
       flex-direction: column;
-      gap: 0.9rem;
+      gap: 1.25rem;
     }
-    a.outlet {
-      display: block;
-      background: #16213e;
-      border: 1px solid #2a3a6a;
-      border-radius: 12px;
-      padding: 1rem 1.25rem;
-      text-decoration: none;
-      color: #fff;
-      transition: transform 0.15s, border-color 0.15s;
+    .outlet {
+      background: linear-gradient(180deg, #fffaf1, #fff3e0);
+      border: 1px solid #edd9b8;
+      border-radius: 16px;
+      padding: 1.15rem 1.25rem 1.25rem;
+      box-shadow: 0 2px 12px rgba(122,74,26,.14), inset 0 1px 0 rgba(255,255,255,.6);
+      transition: transform .15s, box-shadow .15s, border-color .15s;
     }
-    a.outlet:hover {
+    .outlet:hover {
       transform: translateY(-2px);
-      border-color: #ff6b6b;
+      box-shadow: 0 8px 20px rgba(122,74,26,.18), inset 0 1px 0 rgba(255,255,255,.6);
+      border-color: #ec8803;
     }
-    .outlet-city { font-size: 1.1rem; font-weight: 700; }
-    .outlet-label {
+    .outlet-city {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #4a2c0a;
+    }
+    .outlet-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 0.7rem;
+      margin-bottom: 0.75rem;
+      border-bottom: 1px solid #f0d6b0;
+    }
+    .btn-phone { color: #7a5525; font-weight: 500; font-size: 0.85rem; font-variant-numeric: tabular-nums; display: inline-flex; align-items: center; }
+    .header-right { display: flex; align-items: center; gap: 0.5rem; }
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    a.btn {
       display: flex;
       align-items: center;
-      gap: 0.4rem;
-      margin-top: 0.2rem;
+      justify-content: flex-start;
+      gap: 0.45rem;
+      padding: 0.6rem 1.25rem;
+      min-height: 46px;
+      border-radius: 999px;
+      text-decoration: none;
       font-size: 0.85rem;
-      color: #4ade80;
+      font-weight: 600;
+      color: #1a1a2e;
+      box-shadow: 0 1px 2px rgba(0,0,0,.14);
+      transition: transform .15s, box-shadow .15s;
     }
-    .wa-text { color: #bbb; font-size: 0.8rem; margin-top: 0.15rem; }
-    .footer { margin-top: 2.5rem; font-size: 0.8rem; color: #666; }
-    .footer a { color: #888; }
+    a.btn:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,.2); }
+    .btn-maps {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      background: #fff;
+      color: #1a1a2e;
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 1px 2px rgba(0,0,0,.14);
+      transition: transform .15s, box-shadow .15s;
+    }
+    .btn-maps:hover { transform: translateY(-1px); box-shadow: 0 3px 8px rgba(0,0,0,.2); }
+    .btn-maps .btn-logo { height: 11px; }
+    .btn-logo { height: 13px; width: auto; }
+    .wa-pair { display: inline-flex; align-items: center; gap: 0.15rem; }
+    .btn-wa { background: #fff; color: #25D366; border: 1px solid rgba(0,0,0,.08); }
+    .btn-grab { background: #fff; border: 1px solid rgba(0,0,0,.08); }
+    .btn-gofood { background: #fff; border: 1px solid rgba(0,0,0,.08); }
+    .btn-shopee { background: #fff; color: #EE4D2D; border: 1px solid rgba(0,0,0,.08); }
+    .footer { margin-top: 2.5rem; font-size: 0.8rem; color: #7a4a1a; font-family: 'Baloo 2', system-ui, sans-serif; }
+    .footer a { color: #ec8803; font-weight: 600; text-decoration: none; }
   </style>
 </head>
 <body>
@@ -63,31 +116,82 @@
   <div class="tagline">5 Outlet di Balikpapan & Sekitarnya</div>
 
   <div class="outlet-list">
-    <a class="outlet" href="https://wa.me/6285126310612" target="_blank">
-      <div class="outlet-city">Balikpapan Baru</div>
-      <div class="outlet-label">WhatsApp</div>
-      <div class="wa-text">0812-5131-0612</div>
-    </a>
-    <a class="outlet" href="https://wa.me/6285245961289" target="_blank">
-      <div class="outlet-city">Batakan</div>
-      <div class="outlet-label">WhatsApp</div>
-      <div class="wa-text">0852-4596-1289</div>
-    </a>
-    <a class="outlet" href="https://wa.me/6287874687679" target="_blank">
-      <div class="outlet-city">Kilo 2</div>
-      <div class="outlet-label">WhatsApp</div>
-      <div class="wa-text">0878-7468-7679</div>
-    </a>
-    <a class="outlet" href="https://wa.me/6281217719226" target="_blank">
-      <div class="outlet-city">Grogot</div>
-      <div class="outlet-label">WhatsApp</div>
-      <div class="wa-text">0812-1771-9226</div>
-    </a>
-    <a class="outlet" href="https://wa.me/6281217719227" target="_blank">
-      <div class="outlet-city">Petung</div>
-      <div class="outlet-label">WhatsApp</div>
-      <div class="wa-text">0812-1771-9227</div>
-    </a>
+
+        <div class="outlet">
+      <div class="outlet-header">
+        <div class="outlet-city">Balikpapan Baru</div>
+        <div class="header-right">
+          <a class="btn-maps" href="https://maps.app.goo.gl/3owcN2JbWVicfzkN9" target="_blank"><img src="gmaps-pin.svg" alt="" class="btn-logo">Lokasi</a>
+          <div class="btn-phone">0812-5131-0612</div>
+        </div>
+      </div>
+      <div class="btn-group">
+        <a class="btn btn-wa" href="https://wa.me/6285126310612" target="_blank"><span>Hubungi melalui</span><span class="wa-pair"><img src="wa-logo.svg" alt="WhatsApp" class="btn-logo"><span>WhatsApp</span></span></a>
+        <a class="btn btn-grab" href="https://r.grab.com/g/2-1-6-C7VCC6D3ARJALJ" target="_blank"><span>Pesan melalui</span><img src="grab-food-logo.png" alt="GrabFood" class="btn-logo"></a>
+        <a class="btn btn-gofood" href="https://gofood.link/a/Sig9iLC" target="_blank"><span>Pesan melalui</span><img src="gofood-logo.svg" alt="GoFood" class="btn-logo"></a>
+        <a class="btn btn-shopee" href="https://shopee.co.id/universal-link/now-food/shop/23204095?deep_and_deferred=1&shareChannel=whatsapp" target="_blank"><span>Pesan melalui</span><span><span style="color:#EE4D2D">Shopee</span><span style="color:#000">food</span></span></a>
+      </div>
+    </div>
+
+    <div class="outlet">
+      <div class="outlet-header">
+        <div class="outlet-city">Batakan</div>
+        <div class="header-right">
+          <a class="btn-maps" href="https://maps.app.goo.gl/zR21FfgRMEH4KLU86" target="_blank"><img src="gmaps-pin.svg" alt="" class="btn-logo">Lokasi</a>
+          <div class="btn-phone">0852-4596-1289</div>
+        </div>
+      </div>
+      <div class="btn-group">
+        <a class="btn btn-wa" href="https://wa.me/6285245961289" target="_blank"><span>Hubungi melalui</span><span class="wa-pair"><img src="wa-logo.svg" alt="WhatsApp" class="btn-logo"><span>WhatsApp</span></span></a>
+        <a class="btn btn-grab" href="https://r.grab.com/g/2-1-6-C8CHVTXKSA5UCT" target="_blank"><span>Pesan melalui</span><img src="grab-food-logo.png" alt="GrabFood" class="btn-logo"></a>
+        <a class="btn btn-gofood" href="https://gofood.link/a/MKpbUTE" target="_blank"><span>Pesan melalui</span><img src="gofood-logo.svg" alt="GoFood" class="btn-logo"></a>
+        <a class="btn btn-shopee" href="https://shopee.co.id/universal-link/now-food/shop/23494472?deep_and_deferred=1&shareChannel=whatsapp" target="_blank"><span>Pesan melalui</span><span><span style="color:#EE4D2D">Shopee</span><span style="color:#000">food</span></span></a>
+      </div>
+    </div>
+
+    <div class="outlet">
+      <div class="outlet-header">
+        <div class="outlet-city">Kilo 2</div>
+        <div class="header-right">
+          <a class="btn-maps" href="https://maps.app.goo.gl/Vq8yoz8w9UVygTKf7" target="_blank"><img src="gmaps-pin.svg" alt="" class="btn-logo">Lokasi</a>
+          <div class="btn-phone">0878-7468-7679</div>
+        </div>
+      </div>
+      <div class="btn-group">
+        <a class="btn btn-wa" href="https://wa.me/6287874687679" target="_blank"><span>Hubungi melalui</span><span class="wa-pair"><img src="wa-logo.svg" alt="WhatsApp" class="btn-logo"><span>WhatsApp</span></span></a>
+        <a class="btn btn-grab" href="https://r.grab.com/g/2-1-6-C8CHVTXKSA5UCT" target="_blank"><span>Pesan melalui</span><img src="grab-food-logo.png" alt="GrabFood" class="btn-logo"></a>
+        <a class="btn btn-gofood" href="https://gofood.link/a/LHSZWrN" target="_blank"><span>Pesan melalui</span><img src="gofood-logo.svg" alt="GoFood" class="btn-logo"></a>
+        <a class="btn btn-shopee" href="https://shopee.co.id/universal-link/now-food/shop/23494421?deep_and_deferred=1&shareChannel=whatsapp" target="_blank"><span>Pesan melalui</span><span><span style="color:#EE4D2D">Shopee</span><span style="color:#000">food</span></span></a>
+      </div>
+    </div>
+
+    <div class="outlet">
+      <div class="outlet-header">
+        <div class="outlet-city">Grogot</div>
+        <div class="header-right">
+          <a class="btn-maps" href="https://maps.app.goo.gl/ktdfz119bjW9zy6a7" target="_blank"><img src="gmaps-pin.svg" alt="" class="btn-logo">Lokasi</a>
+          <div class="btn-phone">0812-1771-9226</div>
+        </div>
+      </div>
+      <div class="btn-group">
+        <a class="btn btn-wa" href="https://wa.me/6281217719226" target="_blank"><span>Hubungi melalui</span><span class="wa-pair"><img src="wa-logo.svg" alt="WhatsApp" class="btn-logo"><span>WhatsApp</span></span></a>
+        <a class="btn btn-grab" href="https://r.grab.com/o/j2UVJnQn" target="_blank"><span>Pesan melalui</span><img src="grab-food-logo.png" alt="GrabFood" class="btn-logo"></a>
+      </div>
+    </div>
+
+    <div class="outlet">
+      <div class="outlet-header">
+        <div class="outlet-city">Petung</div>
+        <div class="header-right">
+          <a class="btn-maps" href="https://maps.app.goo.gl/UjW8s3koDHukKY849" target="_blank"><img src="gmaps-pin.svg" alt="" class="btn-logo">Lokasi</a>
+          <div class="btn-phone">0812-1771-9227</div>
+        </div>
+      </div>
+      <div class="btn-group">
+        <a class="btn btn-wa" href="https://wa.me/6281217719227" target="_blank"><span>Hubungi melalui</span><span class="wa-pair"><img src="wa-logo.svg" alt="WhatsApp" class="btn-logo"><span>WhatsApp</span></span></a>
+      </div>
+    </div>
+
   </div>
 
   <div class="footer"><a href="https://wa.me/6285126310612">Kontak & Pemesanan</a></div>
